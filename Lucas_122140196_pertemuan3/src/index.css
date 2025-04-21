@@ -1,0 +1,111 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 80% 98%;
+    --foreground: 260 10% 20%;
+
+    --card: 40 80% 98%;
+    --card-foreground: 260 10% 20%;
+
+    --popover: 40 80% 98%;
+    --popover-foreground: 260 10% 20%;
+
+    --primary: 265 83% 63%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 39 96% 89%;
+    --secondary-foreground: 260 10% 20%;
+
+    --muted: 265 20% 85%;
+    --muted-foreground: 265 10% 40%;
+
+    --accent: 39 96% 51%;
+    --accent-foreground: 260 10% 20%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 265 10% 80%;
+    --input: 265 10% 80%;
+    --ring: 265 83% 63%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 260 15% 15%;
+    --sidebar-foreground: 40 80% 98%;
+    --sidebar-primary: 265 83% 63%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 39 96% 51%;
+    --sidebar-accent-foreground: 260 15% 15%;
+    --sidebar-border: 265 20% 20%;
+    --sidebar-ring: 265 83% 63%;
+  }
+
+  .dark {
+    --background: 260 15% 10%;
+    --foreground: 40 80% 98%;
+
+    --card: 260 15% 15%;
+    --card-foreground: 40 80% 98%;
+
+    --popover: 260 15% 15%;
+    --popover-foreground: 40 80% 98%;
+
+    --primary: 265 83% 63%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 260 15% 20%;
+    --secondary-foreground: 40 80% 98%;
+
+    --muted: 260 15% 25%;
+    --muted-foreground: 260 15% 70%;
+
+    --accent: 39 96% 51%;
+    --accent-foreground: 260 15% 10%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 40 80% 98%;
+
+    --border: 260 15% 30%;
+    --input: 260 15% 30%;
+    --ring: 265 83% 63%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .book-card {
+    @apply bg-card rounded-lg border shadow-sm overflow-hidden transition-all hover:shadow-md;
+  }
+  
+  .book-status-owned {
+    @apply bg-book-blue text-white;
+  }
+  
+  .book-status-reading {
+    @apply bg-book-purple text-white;
+  }
+  
+  .book-status-wishlist {
+    @apply bg-book-amber text-black;
+  }
+}
